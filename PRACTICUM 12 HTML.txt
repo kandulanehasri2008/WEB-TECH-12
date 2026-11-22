@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meridian Diagnostics – Medical Tests &amp; Bookings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@500;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="api.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVIGATION ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">Meridian Diagnostics</a>
+      <nav class="main-nav" aria-label="Main menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#tests" class="nav-link">Tests</a></li>
+          <li class="nav-item"><a href="#packages" class="nav-link">Packages</a></li>
+          <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="#booking" class="nav-link nav-cta">Book a test</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Accurate test results, without the long wait.</h1>
+          <p>Blood tests, scans and health check-ups under one roof. Book online, visit at your slot, and get reports the same day.</p>
+          <a href="#booking" class="btn btn-primary">Book a test</a>
+          <a href="#tests" class="btn btn-outline">View all tests</a>
+        </div>
+        <aside class="hero-facts">
+          <h2>Open every day</h2>
+          <p>6:30 AM – 8:00 PM</p>
+          <p>Home sample collection available</p>
+          <p>Fasting tests: before 10 AM</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== TESTS ===== -->
+    <section class="section" id="tests">
+      <div class="container">
+        <h2 class="section-title">Available medical tests</h2>
+        <p class="section-intro">Choose a test to see what it covers and how to prepare.</p>
+
+        <div class="card-grid">
+          <article class="card">
+            <span class="badge">Popular</span>
+            <h3>Complete Blood Count (CBC)</h3>
+            <p>Checks red cells, white cells and platelets. Useful for infections, anaemia and general health.</p>
+            <p class="meta">Report: 6 hours &nbsp;|&nbsp; No fasting</p>
+            <p class="price">₹350</p>
+            <a href="#booking" class="btn btn-small">Book this test</a>
+          </article>
+
+          <article class="card">
+            <span class="badge badge-alt">Fasting needed</span>
+            <h3>Lipid Profile</h3>
+            <p>Measures cholesterol and triglycerides to assess heart health.</p>
+            <p class="meta">Report: 8 hours &nbsp;|&nbsp; Fasting 10–12 hrs</p>
+            <p class="price">₹550</p>
+            <a href="#booking" class="btn btn-small">Book this test</a>
+          </article>
+
+          <article class="card">
+            <h3>HbA1c (Diabetes)</h3>
+            <p>Shows your average blood sugar over the last three months.</p>
+            <p class="meta">Report: 6 hours &nbsp;|&nbsp; No fasting</p>
+            <p class="price">₹450</p>
+            <a href="#booking" class="btn btn-small">Book this test</a>
+          </article>
+
+          <article class="card">
+            <h3>Thyroid Profile (T3, T4, TSH)</h3>
+            <p>Evaluates how well your thyroid gland is working.</p>
+            <p class="meta">Report: 12 hours &nbsp;|&nbsp; No fasting</p>
+            <p class="price">₹600</p>
+            <a href="#booking" class="btn btn-small">Book this test</a>
+          </article>
+
+          <article class="card">
+            <h3>Liver Function Test</h3>
+            <p>Checks liver enzymes and proteins to detect liver problems early.</p>
+            <p class="meta">Report: 8 hours &nbsp;|&nbsp; Fasting 8 hrs</p>
+            <p class="price">₹700</p>
+            <a href="#booking" class="btn btn-small">Book this test</a>
+          </article>
+
+          <article class="card">
+            <h3>Chest X-Ray</h3>
+            <p>Digital imaging of the lungs and heart. Takes about 10 minutes.</p>
+            <p class="meta">Report: 2 hours &nbsp;|&nbsp; Walk-in</p>
+            <p class="price">₹400</p>
+            <a href="#booking" class="btn btn-small">Book this test</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PACKAGES ===== -->
+    <section class="section section-tint" id="packages">
+      <div class="container">
+        <h2 class="section-title">Health check-up packages</h2>
+        <div class="card-grid two-col">
+          <article class="card card-feature">
+            <h3>Basic Health Check</h3>
+            <p>CBC, blood sugar, lipid profile, urine routine.</p>
+            <p class="price">₹999</p>
+          </article>
+          <article class="card card-feature">
+            <h3>Full Body Check</h3>
+            <p>60+ tests including thyroid, liver, kidney, vitamin D and B12.</p>
+            <p class="price">₹2,499</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== IMAGE GALLERY (CSS Grid) ===== -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <h2 class="section-title">Inside our centre</h2>
+        <p class="section-intro">A look at the facilities where your tests are done.</p>
+
+        <div class="gallery">
+          <figure class="gallery-item">
+            <img src="images/lab.svg" alt="Test tubes with blood samples on a rack beside a microscope">
+            <figcaption>
+              <strong>Pathology laboratory</strong>
+              <span>Automated analysers process blood and urine samples with strict quality checks.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="images/xray.svg" alt="Digital chest X-ray displayed on a screen">
+            <figcaption>
+              <strong>Digital X-ray room</strong>
+              <span>Low-dose digital imaging with results ready in about two hours.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="images/collection.svg" alt="Sample collection vials and a syringe">
+            <figcaption>
+              <strong>Sample collection area</strong>
+              <span>Trained phlebotomists use single-use, sterile equipment for every patient.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="images/ultrasound.svg" alt="Ultrasound machine with a monitor showing a scan">
+            <figcaption>
+              <strong>Ultrasound suite</strong>
+              <span>Private rooms for abdominal, pelvic and pregnancy scans.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="images/reception.svg" alt="Reception desk with a booking calendar">
+            <figcaption>
+              <strong>Reception and booking desk</strong>
+              <span>Confirm your slot, submit prescriptions and pay in one place.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="images/reports.svg" alt="A lab report with a chart and a tick mark">
+            <figcaption>
+              <strong>Digital reports</strong>
+              <span>Reports are sent to your email and WhatsApp as soon as they are verified.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== API DATA: TEST PRICE LIST ===== -->
+    <section class="section section-tint" id="price-list">
+      <div class="container">
+        <h2 class="section-title">Complete test price list</h2>
+        <p class="section-intro">Loaded live from our test catalogue, so prices are always current.</p>
+
+        <div class="api-toolbar">
+          <p class="api-summary" id="api-summary">Waiting for data…</p>
+          <button type="button" class="btn btn-small" id="reload-btn">Reload data</button>
+        </div>
+
+        <!-- Loading spinner / error message appear here -->
+        <div class="api-status" id="api-status" role="status" aria-live="polite"></div>
+
+        <!-- Table is filled by api.js -->
+        <div class="table-wrap" id="table-wrap" hidden>
+          <table class="tests-table">
+            <thead>
+              <tr>
+                <th>Test</th>
+                <th>Category</th>
+                <th>Sample</th>
+                <th>Fasting</th>
+                <th>Report in</th>
+                <th>Price</th>
+                <th>Booking</th>
+              </tr>
+            </thead>
+            <tbody id="tests-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BOOKING FORM ===== -->
+    <section class="section" id="booking">
+      <div class="container booking-wrap">
+        <div class="booking-info">
+          <h2 class="section-title">Book your test</h2>
+          <p>Fill in the form and we will confirm your slot by phone within 30 minutes.</p>
+          <ul class="info-list">
+            <li>Carry a photo ID and any doctor's prescription.</li>
+            <li>Reports are sent by email and WhatsApp.</li>
+            <li>Free cancellation up to 2 hours before your slot.</li>
+          </ul>
+        </div>
+
+        <form class="booking-form" id="booking-form" action="#" method="post" novalidate>
+
+          <!-- Success message (shown by script.js after a valid submit) -->
+          <div class="form-success" id="form-success" role="status" aria-live="polite" hidden></div>
+
+          <!-- Group 1: patient details -->
+          <fieldset>
+            <legend>Patient details</legend>
+
+            <div class="form-group">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" placeholder="e.g. Priya Raman"
+                     required minlength="3" maxlength="50" pattern="[A-Za-z][A-Za-z .'\-]{2,49}">
+              <span class="error-msg" id="name-error"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="age">Age (years)</label>
+                <input type="number" id="age" name="age" placeholder="e.g. 34" min="1" max="120" required>
+                <span class="error-msg" id="age-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                  <option value="">Select</option>
+                  <option value="female">Female</option>
+                  <option value="male">Male</option>
+                  <option value="other">Other</option>
+                </select>
+                <span class="error-msg" id="gender-error"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Mobile number</label>
+              <input type="tel" id="phone" name="phone" placeholder="10-digit number"
+                     required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}">
+              <span class="error-msg" id="phone-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email (for your report)</label>
+              <input type="email" id="email" name="email" placeholder="name@example.com" required>
+              <span class="error-msg" id="email-error"></span>
+            </div>
+          </fieldset>
+
+          <!-- Group 2: appointment details -->
+          <fieldset>
+            <legend>Test and appointment</legend>
+
+            <div class="form-group">
+              <label for="test">Test or package</label>
+              <select id="test" name="test" required>
+                <option value="">Select a test</option>
+                <option>Complete Blood Count (CBC)</option>
+                <option>Lipid Profile</option>
+                <option>HbA1c (Diabetes)</option>
+                <option>Thyroid Profile</option>
+                <option>Liver Function Test</option>
+                <option>Chest X-Ray</option>
+                <option>Basic Health Check</option>
+                <option>Full Body Check</option>
+              </select>
+              <span class="error-msg" id="test-error"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="date">Preferred date</label>
+                <input type="date" id="date" name="date" required>
+                <span class="error-msg" id="date-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="time">Preferred time</label>
+                <select id="time" name="time" required>
+                  <option value="">Select a slot</option>
+                  <option>Morning (6:30 – 10:00)</option>
+                  <option>Midday (10:00 – 14:00)</option>
+                  <option>Evening (14:00 – 20:00)</option>
+                </select>
+                <span class="error-msg" id="time-error"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="notes">Notes (optional)</label>
+              <textarea id="notes" name="notes" rows="3" maxlength="200"
+                        placeholder="Home collection address, doctor's name, etc."></textarea>
+              <span class="char-count" id="notes-count">0 / 200</span>
+            </div>
+          </fieldset>
+
+          <div class="form-group check-group">
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">I confirm the details above are correct.</label>
+            <span class="error-msg" id="consent-error"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Confirm booking</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-inner">
+      <div>
+        <h3>Meridian Diagnostics</h3>
+        <p>12, Race Course Road, Coimbatore</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>Phone: 0422 000 0000</p>
+        <p>Email: care@meridiandiagnostics.example</p>
+      </div>
+      <div>
+        <h3>Hours</h3>
+        <p>Mon – Sun: 6:30 AM – 8:00 PM</p>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Meridian Diagnostics. All rights reserved.</p>
+  </footer>
+
+  <!-- Fixed button: stays on screen while the page scrolls -->
+  <a href="tel:04220000000" class="fab-call" aria-label="Call Meridian Diagnostics">Call to book</a>
+
+</body>
+</html>
+/* =====================================================
+   Meridian Diagnostics – style.css
+   Topics covered (search the comment tags):
+   [FONT] [ALIGN] [COLOR] [BG] [BORDER] [SPACING]
+   [BOXMODEL] [SIZE] [POSITION] [LAYOUT] [HOVER]
+   ===================================================== */
+
+/* ---------- Colour variables [COLOR] ---------- */
+:root {
+  --ink: #12263a;        /* main text, headings */
+  --teal: #0f7c7a;       /* primary brand colour */
+  --teal-dark: #0a5c5a;  /* hover state */
+  --mint: #e3f2ef;       /* light section background */
+  --saffron: #e8a33d;    /* badge / highlight */
+  --paper: #fafbfa;      /* page background */
+  --line: #cfdcd9;       /* borders */
+  --white: #ffffff;
+}
+
+/* ---------- Reset + BOX MODEL [BOXMODEL] ----------
+   border-box makes width include padding and border,
+   so elements never grow bigger than the width we set. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Base typography [FONT] [ALIGN] ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;      /* keeps headings visible below sticky header */
+}
+
+body {
+  font-family: "Public Sans", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  background-color: var(--paper);   /* [BG] */
+  text-align: left;                 /* [ALIGN] */
+}
+
+h1, h2, h3 {
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: 3rem; margin-bottom: 1rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+
+p  { margin-bottom: 0.75rem; }
+ul { list-style: none; }
+a  { color: inherit; text-decoration: none; }
+
+/* ---------- Reusable container [SIZE] ---------- */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;              /* centres the block [SPACING] */
+}
+
+/* ---------- Header [POSITION] ----------
+   position: sticky keeps the header at the top while scrolling. */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--line);   /* [BORDER] */
+}
+
+/* =====================================================
+   FLEXBOX NAVIGATION MENU
+   ===================================================== */
+
+/* Outer bar: brand on the left, menu on the right */
+.header-inner {
+  display: flex;                          /* display: flex */
+  flex-direction: row;                    /* flex-direction: items side by side */
+  justify-content: space-between;         /* justify-content: brand left, menu right */
+  align-items: center;                    /* align-items: vertically centred */
+  flex-wrap: wrap;                        /* flex-wrap: allow wrapping on narrow screens */
+  gap: 12px 24px;                         /* gap: row gap, column gap */
+  min-height: 70px;
+  padding: 8px 0;
+}
+
+.brand {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--teal);
+}
+
+/* Menu list: a second flex container nested inside the first */
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;              /* links packed to the right */
+  align-items: center;
+  flex-wrap: wrap;                        /* links move to next line if no space */
+  gap: 8px;
+}
+
+/* Navigation links */
+.nav-link {
+  display: block;
+  padding: 8px 14px;                      /* [SPACING] */
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-link:hover {                         /* [HOVER] */
+  background-color: var(--mint);
+  color: var(--teal-dark);
+}
+
+/* Highlighted booking link */
+.nav-cta {
+  background-color: var(--teal);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.nav-cta:hover {
+  background-color: var(--teal-dark);
+  color: var(--white);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background-color: var(--mint);
+  padding: 80px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-inner {
+  display: grid;                          /* [LAYOUT] */
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-text p {
+  font-size: 1.15rem;
+  max-width: 55ch;
+  margin-bottom: 1.5rem;
+}
+
+/* Side card with CSS positioning [POSITION] */
+.hero-facts {
+  position: relative;
+  background-color: var(--white);
+  border: 2px solid var(--teal);
+  border-radius: 12px;
+  padding: 28px 24px 16px;
+}
+
+.hero-facts::before {
+  content: "";
+  position: absolute;                     /* positioned inside .hero-facts */
+  top: 0;
+  left: 24px;
+  width: 60px;
+  height: 6px;
+  background-color: var(--saffron);
+}
+
+.hero-facts h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- Buttons [HOVER] ---------- */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 2px solid var(--teal);
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--teal);
+  color: var(--white);
+  margin-right: 10px;
+}
+
+.btn-primary:hover {
+  background-color: var(--teal-dark);
+  border-color: var(--teal-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--teal);
+}
+
+.btn-outline:hover {
+  background-color: var(--teal);
+  color: var(--white);
+}
+
+.btn-small {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  background-color: var(--white);
+  color: var(--teal);
+}
+
+.btn-small:hover {
+  background-color: var(--teal);
+  color: var(--white);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  margin-right: 0;
+}
+
+/* ---------- Sections ---------- */
+.section {
+  padding: 72px 0;
+}
+
+.section-tint {
+  background-color: var(--mint);
+}
+
+.section-title {
+  margin-bottom: 0.5rem;
+}
+
+.section-intro {
+  margin-bottom: 32px;
+}
+
+/* ---------- Card grid [LAYOUT] ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.card-grid.two-col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* ---------- Cards [BOXMODEL] [BORDER] [HOVER] ----------
+   Content + padding + border + margin = the box model. */
+.card {
+  position: relative;                      /* so the badge can sit in the corner */
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;                       /* [SIZE] */
+  padding: 24px;                           /* space inside the border */
+  background-color: var(--white);
+  border: 1px solid var(--line);           /* the border itself */
+  border-left: 5px solid var(--teal);
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-left-color: var(--saffron);
+  box-shadow: 0 10px 24px rgba(18, 38, 58, 0.12);
+}
+
+.card p {
+  flex-grow: 1;                            /* pushes price + button to the bottom */
+}
+
+.card .meta {
+  flex-grow: 0;
+  font-size: 0.85rem;
+  color: #4d6272;
+  padding-top: 10px;
+  border-top: 1px dashed var(--line);
+}
+
+.price {
+  flex-grow: 0;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--teal);
+  margin: 6px 0 12px;
+}
+
+.card-feature {
+  min-height: 0;
+  text-align: center;                      /* [ALIGN] */
+  border-left: 1px solid var(--line);
+  border-top: 5px solid var(--teal);
+}
+
+.card-feature:hover {
+  border-left-color: var(--line);
+  border-top-color: var(--saffron);
+}
+
+/* Badge positioned in card corner [POSITION] */
+.badge {
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  padding: 3px 12px;
+  background-color: var(--saffron);
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+/* ---------- Booking section ---------- */
+.booking-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.info-list {
+  margin-top: 20px;
+}
+
+.info-list li {
+  padding: 12px 0 12px 20px;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+
+.info-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 22px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--teal);
+  border-radius: 50%;
+}
+
+.booking-form {
+  padding: 32px;
+  background-color: var(--white);
+  border: 1px solid var(--line);
+  border-top: 6px solid var(--teal);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(18, 38, 58, 0.08);
+}
+
+.booking-form label {
+  display: block;
+  margin: 14px 0 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--ink);
+  background-color: var(--paper);
+  border: 1px solid #9db3ae;
+  border-radius: 6px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.booking-form input:hover,
+.booking-form select:hover,
+.booking-form textarea:hover {
+  border-color: var(--teal);
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(15, 124, 122, 0.25);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background-color: var(--ink);
+  color: #d5e0e6;
+  padding-top: 48px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  padding-bottom: 32px;
+}
+
+.site-footer h3 {
+  color: var(--white);
+  font-size: 1.1rem;
+}
+
+.copyright {
+  padding: 16px 0;
+  margin: 0;
+  text-align: center;                      /* [ALIGN] */
+  font-size: 0.85rem;
+  border-top: 1px solid #2c4258;
+}
+
+/* =====================================================
+   CSS POSITIONING TECHNIQUES
+   1. static   2. relative   3. absolute   4. fixed   5. sticky
+   ===================================================== */
+
+/* 1. STATIC – the default for every element.
+   Elements follow the normal document flow; top/left/z-index have no effect. */
+.hero-text,
+.section-intro,
+.info-list {
+  position: static;
+}
+
+/* 2. RELATIVE – the element stays in the flow but can be nudged
+   from its normal place. It also becomes the reference box for
+   absolutely positioned children (badge, accent line). */
+.hero-facts {
+  position: relative;
+  top: -6px;                /* lifted 6px; the space it originally took is kept */
+}
+
+.card {
+  position: relative;       /* reference box for .badge */
+}
+
+/* 3. ABSOLUTE – removed from the flow and placed against the nearest
+   positioned parent (the .card). Used for the corner labels. */
+.badge {
+  position: absolute;
+  top: -10px;
+  right: 16px;
+}
+
+.badge-alt {
+  background-color: var(--ink);
+  color: var(--white);
+}
+
+/* 4. FIXED – placed against the browser window, so it stays in view
+   while the page scrolls. Used for the "Call to book" button. */
+.fab-call {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 200;             /* keeps it above cards and the header */
+  padding: 14px 22px;
+  background-color: var(--saffron);
+  color: var(--ink);
+  font-weight: 600;
+  border-radius: 40px;
+  box-shadow: 0 6px 18px rgba(18, 38, 58, 0.3);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.fab-call:hover {
+  background-color: #f0b455;
+  transform: translateY(-3px);
+}
+
+/* 5. STICKY – scrolls normally, then sticks at the given offset.
+   The header sticks to the top of the window (see .site-header).
+   The booking details also stay visible next to the long form. */
+.booking-info {
+  position: sticky;
+  top: 90px;                /* just below the 70px sticky header */
+}
+
+/* =====================================================
+   IMAGE GALLERY – CSS GRID
+   ===================================================== */
+
+/* Responsive columns: as many 280px+ columns as fit, each sharing
+   the leftover space equally. No media query needed. */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;                        /* clips image to rounded corners */
+  background-color: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Consistent image dimensions: every image gets the same 4:3 box,
+   and object-fit crops (not stretches) photos of other sizes. */
+.gallery-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line);
+}
+
+/* Meaningful captions: a title plus one line of description */
+.gallery-item figcaption {
+  flex-grow: 1;                            /* equal-height cards in each row */
+  padding: 16px 18px 20px;
+}
+
+.gallery-item figcaption strong {
+  display: block;
+  margin-bottom: 4px;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.15rem;
+}
+
+.gallery-item figcaption span {
+  font-size: 0.92rem;
+  color: #4d6272;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(18, 38, 58, 0.12);
+}
+
+/* =====================================================
+   FORM VALIDATION STYLES
+   :focus  :valid  :invalid  border  padding  display
+   ===================================================== */
+
+/* Fieldset groups related fields; legend is its title */
+.booking-form fieldset {
+  display: block;
+  margin: 0 0 20px;
+  padding: 8px 18px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.booking-form legend {
+  padding: 0 8px;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--teal-dark);
+}
+
+.form-group {
+  display: block;
+}
+
+/* Focus: clear outline so keyboard users see where they are */
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(15, 124, 122, 0.25);
+}
+
+/* :invalid / :valid only after the user has touched the field.
+   (script.js adds the "touched" class on blur, input and submit.) */
+.booking-form .touched:invalid {
+  border: 2px solid #c0392b;
+  background-color: #fdf1f0;
+}
+
+.booking-form .touched:valid {
+  border: 2px solid #2e8b57;
+}
+
+.booking-form .touched:invalid:focus {
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.25);
+}
+
+/* Error message under each field: hidden until it has text */
+.error-msg {
+  display: none;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #c0392b;
+}
+
+.error-msg.visible {
+  display: block;
+}
+
+.char-count {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  text-align: right;
+  color: #4d6272;
+}
+
+/* Consent checkbox row */
+.check-group {
+  margin-bottom: 8px;
+}
+
+.booking-form .check-group input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.booking-form .check-group label {
+  display: inline;
+  font-weight: 500;
+}
+
+/* Success message after a valid submit */
+.form-success {
+  margin-bottom: 20px;
+  padding: 16px 18px;
+  background-color: #e6f4ea;
+  border: 1px solid #2e8b57;
+  border-left: 6px solid #2e8b57;
+  border-radius: 8px;
+  color: #1b5e3a;
+}
+
+.form-success[hidden] {
+  display: none;
+}
+
+.form-success strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 1.05rem;
+}
+
+/* =====================================================
+   API DATA SECTION: TOOLBAR, LOADER, ERROR, TABLE
+   display  grid  flex  overflow  border  padding  margin
+   ===================================================== */
+
+.api-toolbar {
+  display: flex;                           /* flex: summary left, button right */
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.api-summary {
+  margin: 0;
+  font-weight: 500;
+}
+
+.api-toolbar .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Status area: loading spinner or error box */
+.api-status {
+  display: none;
+}
+
+.api-status.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 40px 20px;
+  background-color: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.spinner {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border: 4px solid var(--line);
+  border-top-color: var(--teal);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.api-status.error {
+  display: block;
+  padding: 20px 24px;
+  background-color: #fdf1f0;
+  border: 1px solid #c0392b;
+  border-left: 6px solid #c0392b;
+  border-radius: 10px;
+  color: #8e2a1f;
+}
+
+.api-status.error p {
+  margin: 6px 0 0;
+}
+
+/* Table wrapper: scrolls sideways on narrow screens (overflow) */
+.table-wrap {
+  overflow-x: auto;
+  background-color: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.table-wrap[hidden] {
+  display: none;
+}
+
+.tests-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+}
+
+.tests-table th,
+.tests-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+.tests-table thead th {
+  background-color: var(--ink);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.tests-table tbody tr:nth-child(even) {
+  background-color: var(--paper);
+}
+
+.tests-table tbody tr:hover {
+  background-color: var(--mint);
+}
+
+.tests-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tests-table .test-name {
+  font-weight: 600;
+}
+
+.tests-table .price-cell {
+  font-weight: 600;
+  color: var(--teal-dark);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner { animation-duration: 2s; }
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN – CSS MEDIA QUERIES
+   All styles above are written for DESKTOP (mobile-friendly
+   defaults like fluid widths and auto-fit grids help too).
+   The queries below adapt the layout for smaller screens:
+
+     Large desktop : 1200px and wider
+     Desktop       : 1025px – 1199px   (default styles)
+     Tablet        : 769px  – 1024px
+     Small tablet  : 601px  – 768px
+     Mobile        : 600px and below
+   Remember: <meta name="viewport"> in index.html is required.
+   ===================================================== */
+
+/* ---------- LARGE DESKTOP (1200px and up) ---------- */
+@media (min-width: 1200px) {
+  .container { max-width: 1200px; }
+  h1         { font-size: 3.4rem; }
+}
+
+/* ---------- TABLET (1024px and below) ---------- */
+@media (max-width: 1024px) {
+  .container     { width: 92%; }
+  h1             { font-size: 2.6rem; }
+  h2             { font-size: 1.8rem; }
+
+  .hero          { padding: 60px 0; }
+  .hero-inner    { gap: 32px; }
+  .section       { padding: 60px 0; }
+
+  .nav-link      { padding: 8px 10px; font-size: 0.95rem; }
+  .card-grid     { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  .booking-wrap  { gap: 32px; }
+  .footer-inner  { gap: 24px; }
+}
+
+/* ---------- SMALL TABLET / PORTRAIT (768px and below) ---------- */
+@media (max-width: 768px) {
+  h1 { font-size: 2.2rem; }
+
+  /* Header: brand on top, menu centred underneath */
+  .header-inner  { flex-direction: column; justify-content: center; }
+  .nav-list      { justify-content: center; }
+
+  /* Two-column layouts become one column */
+  .hero-inner    { grid-template-columns: 1fr; }
+  .booking-wrap  { grid-template-columns: 1fr; }
+  .hero-facts    { top: 0; }
+
+  /* Sticky sidebar is pointless when stacked */
+  .booking-info  { position: static; }
+
+  /* Footer: 2 columns */
+  .footer-inner  { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------- MOBILE (600px and below) ---------- */
+@media (max-width: 600px) {
+  html           { scroll-padding-top: 16px; }
+  h1             { font-size: 1.9rem; }
+  h2             { font-size: 1.5rem; }
+
+  .hero          { padding: 40px 0; }
+  .section       { padding: 44px 0; }
+
+  /* Header no longer sticks: a stacked menu would cover too much screen */
+  .site-header   { position: static; }
+
+  /* Menu: one link per row, full width */
+  .main-nav,
+  .nav-list      { width: 100%; }
+  .nav-list      { flex-direction: column; align-items: stretch; gap: 4px; }
+  .nav-link      { text-align: center; border: 1px solid var(--line); }
+
+  /* Hero buttons stack and fill the width (easy to tap) */
+  .hero-text .btn { display: block; margin: 0 0 10px; }
+
+  /* Everything becomes a single column */
+  .card-grid,
+  .card-grid.two-col,
+  .gallery,
+  .form-row,
+  .footer-inner  { grid-template-columns: 1fr; }
+
+  .card          { min-height: 0; }
+  .booking-form  { padding: 20px; }
+
+  /* Fixed call button: smaller and closer to the corner */
+  .fab-call      { right: 12
+px; bottom: 12px; padding: 12px 18px;
+ }
+/* =====================================================
+   Meridian Diagnostics – api.js
+   Loads the test catalogue from an API endpoint and shows
+   it in a table.
+
+   Uses: fetch(), async, await, response.json(),
+         try, catch, finally,
+         createElement(), appendChild(), textContent
+   ===================================================== */
+
+/* Change this to a real URL when you have a server, e.g.
+   "https://api.example.com/v1/tests". The JSON must look like
+   { "tests": [ { name, category, sample, fastingHours, reportHours, price } ] } */
+const API_URL = "tests.json";
+
+const statusBox   = document.getElementById("api-status");
+const summaryText = document.getElementById("api-summary");
+const tableWrap   = document.getElementById("table-wrap");
+const tableBody   = document.getElementById("tests-body");
+const reloadBtn   = document.getElementById("reload-btn");
+
+/* ---------- Helpers to show loading / error states ---------- */
+function showLoading() {
+  statusBox.innerHTML = "";
+  statusBox.className = "api-status loading";
+
+  const spinner = document.createElement("span");
+  spinner.className = "spinner";
+
+  const text = document.createElement("span");
+  text.textContent = "Loading tests…";
+
+  statusBox.appendChild(spinner);
+  statusBox.appendChild(text);
+
+  tableWrap.hidden = true;
+  summaryText.textContent = "Fetching data from the server…";
+  reloadBtn.disabled = true;
+}
+
+function showError(message) {
+  statusBox.innerHTML = "";
+  statusBox.className = "api-status error";
+
+  const title = document.createElement("strong");
+  title.textContent = "We could not load the test list.";
+
+  const detail = document.createElement("p");
+  detail.textContent = message;
+
+  statusBox.appendChild(title);
+  statusBox.appendChild(detail);
+
+  tableWrap.hidden = true;
+  summaryText.textContent = "No data loaded.";
+}
+
+function clearStatus() {
+  statusBox.innerHTML = "";
+  statusBox.className = "api-status";
+}
+
+/* ---------- Build one table row from one test object ---------- */
+function createCell(text, className) {
+  const td = document.createElement("td");
+  td.textContent = text;
+  if (className) {
+    td.className = className;
+  }
+  return td;
+}
+
+function createRow(test) {
+  const tr = document.createElement("tr");
+
+  tr.appendChild(createCell(test.name, "test-name"));
+  tr.appendChild(createCell(test.category));
+  tr.appendChild(createCell(test.sample));
+  tr.appendChild(createCell(test.fastingHours > 0 ? test.fastingHours + " hrs" : "Not needed"));
+  tr.appendChild(createCell(test.reportHours + " hrs"));
+  tr.appendChild(createCell("₹" + Number(test.price).toLocaleString("en-IN"), "price-cell"));
+
+  /* Last column: a button that fills in the booking form */
+  const actionCell = document.createElement("td");
+  const bookButton = document.createElement("button");
+  bookButton.type = "button";
+  bookButton.className = "btn btn-small";
+  bookButton.textContent = "Book";
+  bookButton.addEventListener("click", function () {
+    selectTestInForm(test.name);
+  });
+  actionCell.appendChild(bookButton);
+  tr.appendChild(actionCell);
+
+  return tr;
+}
+
+/* Choose the test in the booking form and jump to it */
+function selectTestInForm(testName) {
+  const select = document.getElementById("test");
+  let option = Array.from(select.options).find(function (opt) {
+    return opt.value === testName || opt.textContent === testName;
+  });
+
+  /* The catalogue has more tests than the form lists, so add it if missing */
+  if (!option) {
+    option = document.createElement("option");
+    option.textContent = testName;
+    select.appendChild(option);
+  }
+
+  select.value = option.value || option.textContent;
+  select.dispatchEvent(new Event("change", { bubbles: true }));
+  document.getElementById("booking").scrollIntoView({ behavior: "smooth" });
+  document.getElementById("name").focus({ preventScroll: true });
+}
+
+/* ---------- Fill the table with the received data ---------- */
+function renderTable(tests) {
+  tableBody.innerHTML = "";
+
+  tests.forEach(function (test) {
+    tableBody.appendChild(createRow(test));
+  });
+
+  tableWrap.hidden = false;
+}
+
+/* ---------- Main function: fetch, check, show ---------- */
+async function loadTests() {
+  showLoading();
+
+  try {
+    /* Short pause so the loading spinner is visible when testing locally.
+       Delete this line when using a real server. */
+    await new Promise(function (resolve) { setTimeout(resolve, 700); });
+
+    const response = await fetch(API_URL);
+
+    /* fetch() only fails on network problems, so check the status ourselves */
+    if (!response.ok) {
+      throw new Error("The server replied with status " + response.status + ".");
+    }
+
+    const data = await response.json();
+
+    if (!Array.isArray(data.tests) || data.tests.length === 0) {
+      throw new Error("The server sent no tests.");
+    }
+
+    clearStatus();
+    renderTable(data.tests);
+    summaryText.textContent =
+      data.tests.length + " tests available. Last updated " + data.updated + ".";
+
+  } catch (error) {
+    let message = error.message;
+
+    /* A network failure (or opening index.html straight from a folder) */
+    if (error instanceof TypeError) {
+      message =
+        "Could not reach the server. If you opened index.html directly from a folder, " +
+        "run the page with a local server (for example, VS Code Live Server) and try again.";
+    }
+    /* Invalid JSON from the server */
+    if (error instanceof SyntaxError) {
+      message = "The server sent data in an unexpected format.";
+    }
+
+    showError(message);
+
+  } finally {
+    /* Runs whether the request worked or failed */
+    reloadBtn.disabled = false;
+  }
+}
+
+/* Load once when the page opens, and again when the button is clicked */
+reloadBtn.addEventListener("click", loadTests);
+loadTests();
+{
+  "centre": "Meridian Diagnostics",
+  "updated": "2026-11-22",
+  "tests": [
+    { "id": 1,  "name": "Complete Blood Count (CBC)",  "category": "Blood", "sample": "Blood", "fastingHours": 0,  "reportHours": 6,  "price": 350 },
+    { "id": 2,  "name": "Lipid Profile",               "category": "Blood", "sample": "Blood", "fastingHours": 12, "reportHours": 8,  "price": 550 },
+    { "id": 3,  "name": "HbA1c (Diabetes)",            "category": "Blood", "sample": "Blood", "fastingHours": 0,  "reportHours": 6,  "price": 450 },
+    { "id": 4,  "name": "Thyroid Profile",             "category": "Hormone", "sample": "Blood", "fastingHours": 0, "reportHours": 12, "price": 600 },
+    { "id": 5,  "name": "Liver Function Test",         "category": "Blood", "sample": "Blood", "fastingHours": 8,  "reportHours": 8,  "price": 700 },
+    { "id": 6,  "name": "Kidney Function Test",        "category": "Blood", "sample": "Blood", "fastingHours": 0,  "reportHours": 8,  "price": 650 },
+    { "id": 7,  "name": "Vitamin D (25-OH)",           "category": "Vitamin", "sample": "Blood", "fastingHours": 0, "reportHours": 24, "price": 900 },
+    { "id": 8,  "name": "Vitamin B12",                 "category": "Vitamin", "sample": "Blood", "fastingHours": 0, "reportHours": 24, "price": 750 },
+    { "id": 9,  "name": "Urine Routine",               "category": "Urine", "sample": "Urine", "fastingHours": 0,  "reportHours": 4,  "price": 150 },
+    { "id": 10, "name": "Chest X-Ray",                 "category": "Imaging", "sample": "None", "fastingHours": 0, "reportHours": 2,  "price": 400 },
+    { "id": 11, "name": "Abdominal Ultrasound",        "category": "Imaging", "sample": "None", "fastingHours": 6, "reportHours": 3,  "price": 1100 },
+    { "id": 12, "name": "ECG",                         "category": "Cardiac", "sample": "None", "fastingHours": 0, "reportHours": 1,  "price": 300 }
+  ]
+}
+}
